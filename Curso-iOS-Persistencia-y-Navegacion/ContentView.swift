@@ -7,10 +7,13 @@
 
 import SwiftUI
 
+// Podemos definir constantes para las claves (ej. en guardarFechaLogin())
 enum ClavesStorage {
     static let ultimoLogin = "ultimo_login"
 }
 
+// Idem a lo anterior, pero con un acceso más abreviado a la constante
+// Ejemplo en cargarFechaLogin()
 extension String {
     static let ultimoLogin = "ultimo_login"
 }
