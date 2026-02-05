@@ -18,8 +18,9 @@ extension String {
     static let ultimoLogin = "ultimo_login"
 }
 
-struct ContentView: View {
+struct PersistirDatosSimples: View {
 
+    // "usuario" y "musicaActivada" son las claves
     @AppStorage("usuario") private var nombreUsuario = "Invitado"
     @AppStorage("musicaActivada") private var musicaActivada: Bool = false
     
@@ -65,11 +66,11 @@ struct ContentView: View {
     }
     
     func borrarFechaLogin() {
-        UserDefaults.standard.removeObject(forKey: "ultimo_login")
+        UserDefaults.standard.removeObject(forKey: .ultimoLogin)
         ultimaFechaLogin = "Borrado registro de login"
     }
 }
 
 #Preview {
-    ContentView()
+    PersistirDatosSimples()
 }
