@@ -34,7 +34,7 @@ class Router {
 }
 
 
-struct VistaPrincipal: View {
+fileprivate struct VistaPrincipal: View {
     
     @Environment(Router.self) private var router
     
